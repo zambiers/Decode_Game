@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 class Decrypt{
@@ -18,15 +19,21 @@ public:
   Main functions
 */
 
-  bool input_correct();
-  void encode();
-  
+  bool input_correct(string input);
+  void encode(vector<string> text[]);
+  void decode(const string input, vector<string> text[]);
+  vector generate(vector<string> text[]);
 
+/*
+  Display functions
+*/
+
+  void print_encoded(vector<string> text[]);
+  
 
 private:
   string input;
-  string text[] = "";
-  string generate;
+  vector<string> text[];
   
 /*
   Helper functions
