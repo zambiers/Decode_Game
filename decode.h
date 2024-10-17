@@ -12,17 +12,20 @@ public:
   Decrypt();
   ~Decrypt();
 
+  int size();
+
 /*
   Main functions
 */
 
   bool input_correct();
   void encode();
+  
 
 
 private:
   string input;
-  string text;
+  string text[] = "";
   string generate;
   
 /*
