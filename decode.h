@@ -15,9 +15,9 @@ public:
 /*
   Main functions
 */
-s
+
   bool input_correct();
-  string encode();
+  void encode();
 
 
 private:
@@ -25,4 +25,10 @@ private:
   string text;
   string generate;
   
+/*
+  Helper functions
+*/
+
+  void clear();
+
 }
