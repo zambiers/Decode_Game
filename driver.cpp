@@ -21,19 +21,7 @@ int main() {
         return 1;
     }
 
-    // vector<string> lines;
-    // string line;
 
-    // while (getline(file, line)) {
-    //     lines.push_back(line);
-    // }
-
-    // file.close();
-
-    // // Process the lines
-    // for (const auto& line : lines) {
-    //     cout << line << endl;
-    // }
 
     return 0;
 }
