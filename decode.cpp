@@ -26,6 +26,18 @@ bool Decrypt::input_correct(string input){
 }
 
 void Decrypt::encode(vector<string> text[]){
+
+  
+  
+
+  // for(int i = 0; i , text.length(); i++){
+  //   if('a' <= text[i] && text[i] <= 'z'){
+
+  //   }
+  // }
+
+  
+
 }
 
 /*
