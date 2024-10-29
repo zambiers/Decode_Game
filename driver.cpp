@@ -1,7 +1,12 @@
+#include "decode.h"
+
 #include <iostream>
-#include <fstream>
+#include <ifstream>
 #include <string>
 #include <vector>
+#include <unordered_map>
+#include <regex> // to look for a pattern
+
 using namespace std;
 
 int main() {
@@ -16,19 +21,19 @@ int main() {
         return 1;
     }
 
-    vector<string> lines;
-    string line;
+    // vector<string> lines;
+    // string line;
 
-    while (getline(file, line)) {
-        lines.push_back(line);
-    }
+    // while (getline(file, line)) {
+    //     lines.push_back(line);
+    // }
 
-    file.close();
+    // file.close();
 
-    // Process the lines
-    for (const auto& line : lines) {
-        cout << line << endl;
-    }
+    // // Process the lines
+    // for (const auto& line : lines) {
+    //     cout << line << endl;
+    // }
 
     return 0;
 }

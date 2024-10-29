@@ -1,9 +1,11 @@
 #pragma once
+
 #include <iostream>
+#include <ifstream>
 #include <string>
 #include <vector>
-#include <fstream>
-#include <cctype>
+#include <unordered_map>
+#include <regex> // to look for a pattern
 
 using namespace std;
 
@@ -22,17 +24,15 @@ public:
   Main functions
 */
 
-  bool input_correct(string input);
+  bool input_correct(string input, const string& Key);
+  bool code_assign(const string& filename, const string& Key);
 
-  bool encode(const string& filename, bool Key);
-  bool code_assign(const string& filename, bool encode);
+  string decode(unordered_map<char, int>& freq, const string& Key, string& message);
 
 /*
   Helper functions
 */
-
-  char getCipher(char ch, int shift);
-  
+  bool getline(const string& filename);
 
 /*
   Display functions
@@ -43,7 +43,8 @@ public:
 
 private:
   string input;
-  vector<string> text[];
+  string Key;
+  string message;
   
 /*
   Helper functions
