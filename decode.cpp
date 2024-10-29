@@ -1,7 +1,10 @@
 #include "decode.h"
 #include <iostream>
 #include <string>
+#include <fstream>
+#include <cctype>
 #include <vector>
+
 using namespace std;
 
 /*
@@ -19,30 +22,49 @@ Decrypt::~Decrypt(){
   Main functions
 */
 
+bool Decrypt::code_assign(const string& filename, bool encode){
+  getCipher()
+
+
+  return false;
+}
+
+
 bool Decrypt::input_correct(string input){
 
 
     return false;
 }
 
-void Decrypt::encode(vector<string> text[]){
+bool Decrypt::encode(const string& filename, bool Key){
 
-  
-  
+    ifstream inFile(filename);
 
-  // for(int i = 0; i , text.length(); i++){
-  //   if('a' <= text[i] && text[i] <= 'z'){
+    if(!inFile){
+      return false;
+    }
 
-  //   }
-  // }
+    string content((istreambuf_iterator<char>(inFile)), {});
+    inFile.close();
 
-  
+    
 
 }
 
 /*
     Helper Functions
 */
-void Decrypt::clear(){
-  
+
+char Decrypt::getCipher(char ch, int shift){
+    if (isalpha(ch)) {
+        bool isUpper = isupper(ch);
+        char base = isUpper ? 'A' : 'a';
+        return base + (ch - base + shift + 26) % 26;
+    } else {
+        return ch;
+    }
 }
+
+// void Decrypt::clear(){
+  
+// }

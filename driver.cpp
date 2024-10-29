@@ -21,11 +21,6 @@ int main() {
 
     while (getline(file, line)) {
         lines.push_back(line);
-
-        // if(lines == "Key: "){
-
-        // }
-        encode(lines);
     }
 
     file.close();
