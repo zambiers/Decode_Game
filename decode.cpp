@@ -4,6 +4,7 @@
 #include <fstream>
 #include <cctype>
 #include <vector>
+#include <regex> // to look for a pattern
 
 using namespace std;
 
